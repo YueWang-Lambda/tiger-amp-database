@@ -1,0 +1,37 @@
+<section class="record-section database-comparison" id="database-comparison" aria-labelledby="comparison-title">
+  <p class="eyebrow">CONNECTED EVIDENCE IN CONTEXT</p>
+  <h2 id="comparison-title">Comparison with AMP databases</h2>
+  <p>Explore complementary sequence coverage and the evidence available for connecting antimicrobial potency with host-cell response in TIGER, DRAMP 5.0, DBAASP v4 and dbAMP 3.0.</p>
+  <p class="comparison-meta">Comparison snapshot: <time datetime="2026-11-04">4 November 2026</time>. TIGER source-data release: 25 October 2026.</p>
+  <div id="comparison-loading" role="status">Loading the versioned comparison…</div>
+  <div id="comparison-content" hidden>
+    <h3>Collection and sequence coverage</h3>
+    <div class="table-scroll"><table id="comparison-counts"><caption>Source-native records and sequences under one shared comparison rule</caption><thead><tr><th scope="col">Collection</th><th scope="col">Native records</th><th scope="col">Comparable unique sequences</th><th scope="col">Record definition</th></tr></thead><tbody></tbody></table></div>
+    <p class="comparison-note">Sequence comparison uses the 20 standard amino-acid letters, length 2–100, case-insensitive exact matching and sequence deduplication. Chemical modifications and stereochemistry remain separate annotations.</p>
+    <div class="comparison-scope"><label for="comparison-scope">Explore TIGER contribution</label><select id="comparison-scope"><option value="archive">Complete entity archive</option><option value="core" selected>Core collection</option><option value="paired">Activity–toxicity linked subset</option></select></div>
+    <div class="comparison-summary" id="comparison-summary" aria-live="polite"></div>
+    <div class="comparison-bars" id="comparison-bars" aria-label="TIGER sequence overlap by comparator"></div>
+    <h4 id="intersection-title">Exact sequence intersections</h4>
+    <p class="comparison-note">Each column is one exact membership combination. Filled dots identify its collections; the bar counts sequences found in those collections only.</p>
+    <div class="comparison-upset" id="comparison-upset"></div>
+    <details><summary>View intersection counts as a table</summary><div class="table-scroll"><table id="intersection-table"><thead><tr><th scope="col">Collections in the intersection</th><th scope="col">Distinct sequences</th></tr></thead><tbody></tbody></table></div></details>
+    <h3>Activity–toxicity evidence: what each number represents</h3>
+    <p>These resources expose different evidence objects. The cards below describe each downloaded annotation layer; the definitions travel with the counts.</p>
+    <div class="comparison-evidence" id="comparison-evidence"></div>
+    <h3>Quantitative pairing audit: TIGER and DBAASP</h3>
+    <p class="comparison-note">This audit uses TIGER source observations and the DBAASP detail API to select MIC and HC50/IC50/CC50 evidence in shared native units, with resolved common targets and hosts. Each pair stays within one source reference. TIGER counts literature entities; DBAASP counts native entries. The parser rules and exclusions are documented below.</p>
+    <div class="table-scroll"><table id="quantitative-pairing"><thead><tr><th scope="col">Audited subset</th><th scope="col">TIGER</th><th scope="col">DBAASP</th></tr></thead><tbody></tbody></table></div>
+    <figure class="comparison-pair-figure"><img src="/static/comparison/20261104/Figure_S3_pair_coverage.svg" alt="Exclusive and shared sequence–strain–host coverage keys in the parsed TIGER and DBAASP quantitative subsets" loading="lazy"><figcaption id="pair-coverage-description"></figcaption></figure>
+    <p class="comparison-note">Coverage keys combine a canonical sequence, a normalized strain and a host observed in both parsed subsets. Source assay roles remain as published; the full counting methods describe their treatment. Resource-specific keys can reflect literature coverage, naming and parser exclusions. They describe these parsed subsets; chemical identity and agreement of concentrations require separate checks. <a href="/static/comparison/20261104/Figure_S3_pair_coverage.pdf" download>Quantitative coverage figure · PDF</a></p>
+    <h3>From TIGER records to quantitative evidence links</h3>
+    <div class="table-scroll"><table id="comparison-stages"><thead><tr><th scope="col">Selection</th><th scope="col">Peptide entities</th><th scope="col">Strain–peptide–host links</th></tr></thead><tbody></tbody></table></div>
+    <p class="comparison-note">Native-unit selections require MIC and HC50/IC50/CC50 measurements in the same reported concentration unit. Exact-value selections require an exact observation on both sides. Selectivity analysis also uses the underlying assay context. <a href="/relations?kind=paired">Explore linked evidence →</a></p>
+    <h4>Microbial–host coverage of TIGER evidence links</h4>
+    <p class="comparison-note">Each cell counts strain–peptide–host links for one microbial category and host. Darker colors indicate more links on a logarithmic scale; white cells have zero. Hover over or focus a cell to inspect its count.</p>
+    <div class="comparison-heatmap" id="comparison-heatmap"></div>
+    <p id="heatmap-selection" class="comparison-note" aria-live="polite">13 microbial categories · 9 host categories · 19,888 evidence links</p>
+    <details><summary>View microbial–host counts as a table</summary><div class="table-scroll"><table id="heatmap-table"><thead></thead><tbody></tbody></table></div></details>
+    <details class="comparison-methods"><summary>Methods, source versions and measurement audit</summary><div id="comparison-methods"></div><a href="/static/comparison/20261104/Figure_S2_measurement_audit.pdf">Measurement audit and context fields · PDF</a></details>
+    <div class="comparison-downloads"><a class="button secondary" href="/static/comparison/20261104/comparison_counts.tsv" download>Download comparison data</a><a class="button secondary" href="/static/comparison/20261104/Figure_2_comparison.pdf" download>Sequence coverage figure · PDF</a><a class="button secondary" href="/static/comparison/20261104/Figure_3_evidence.pdf" download>Evidence links figure · PDF</a><a href="/static/comparison/20261104/comparison.json" download>Complete comparison · JSON</a><a href="/static/comparison/20261104/methods.txt">Counting methods and sources</a></div>
+  </div>
+</section>

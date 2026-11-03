@@ -24,7 +24,7 @@ TIGER 是通过 AI Agents 对原始研究论文及补充材料开展语义阅读
 
 ## 当前数据规模
 
-**源数据发布日期：2026-10-25；静态网站版本日期：2026-11-03。**
+**源数据发布日期：2026-10-25；公开数据包日期：2026-11-03；数据库比较快照：2026-11-04。**
 
 | 数据层级 | 数量 |
 | --- | ---: |
@@ -52,6 +52,8 @@ TIGER 是通过 AI Agents 对原始研究论文及补充材料开展语义阅读
 ## 检索和下载
 
 网站提供[多肽检索](https://yuewang-lambda.github.io/tiger-amp-database/search/)、[关联证据](https://yuewang-lambda.github.io/tiger-amp-database/relations/?kind=paired)、[文献索引](https://yuewang-lambda.github.io/tiger-amp-database/publications/)、[统计](https://yuewang-lambda.github.io/tiger-amp-database/statistics/)和[数据指南](https://yuewang-lambda.github.io/tiger-amp-database/help/)。浏览、检索和下载均无需注册。可从 [melittin](https://yuewang-lambda.github.io/tiger-amp-database/search/?query=melittin) 或示例肽 [AS0170-P2](https://yuewang-lambda.github.io/tiger-amp-database/peptide/?id=AS0170-P2) 开始探索。
+
+统计页面还提供与 DRAMP 5.0、DBAASP v4 和 dbAMP 3.0 的序列覆盖比较、活性—毒性证据口径说明，以及可下载的比较数值和图表。可分别查看 TIGER 完整档案、核心集和关联证据子集的序列交集。
 
 [下载页面](https://yuewang-lambda.github.io/tiger-amp-database/download/)提供四张主要 CSV.gz 表格：
 

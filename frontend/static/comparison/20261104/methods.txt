@@ -1,0 +1,21 @@
+TIGER comparison snapshot: 4 November 2026
+
+The comparison is a fixed snapshot, not a live ranking. TIGER entity IDs retain article-specific identity; external collections use their native entry definitions. Counts of entities, sequences, measurements and relationship combinations are reported separately.
+
+Canonical sequence analysis removes whitespace and documented missing markers, folds case and retains only the 20 standard amino-acid letters at lengths 2–100. Identical strings are deduplicated. Matching does not establish chemical identity; D/L configurations, termini, crosslinks and other modifications require separate inspection.
+
+The DRAMP primary scope reproduces the 32,296 entries in its v5 paper. Including 5,909 additional Candidate AMP records changes TIGER core sequences unmatched to the three-library union from 5,160 to 5,154. dbAMP current Excel has 35,600 records versus 35,599 in FASTA and 35,518 in the paper snapshot.
+
+Activity–toxicity cards describe the specific annotation object available in each export. Text annotation, functional-category tags and qualified concentration evidence have different inclusion criteria. A toxic functional tag does not enumerate all measured low-toxicity or negative observations.
+
+All 14,221 DBAASP entries returned by its toxicity filter were retrieved. A conservative parser found 17,294 same-reference, shared-native-unit MIC/50%-response strain–host combinations in 2,782 native entries. This is a parsable common-target subset; unmatched host aliases, non-scalar values and unresolved strain/reference descriptions are tracked as exclusions. It is not a full count of all DBAASP associations.
+
+TIGER link validation checked both relation foreign keys and shared article identity for all 19,888 links. Published links combine observed strain and host relationships; they are not additional experiments or precomputed clinical therapeutic indices. Native-unit pairing was recomputed from source observations without inferring molecular weights.
+
+DBAASP comparison data were obtained from the DBAASP team’s public API and are acknowledged as that team’s curated data. DRAMP and dbAMP comparisons likewise use their official public exports. These comparator downloads are separate from TIGER’s independently extracted production records.
+
+The comparison downloads also provide deduplicated sequence–normalized-strain–host coverage keys for the parsed TIGER and DBAASP quantitative subsets, restricted to host categories observed in both. Source assay roles are preserved: HepG2 responses in DBAASP targetActivities are not reassigned to its hemolytic/cytotoxic array. Resource-specific keys can reflect coverage, naming or parser exclusions; this projection does not test concentration agreement or establish molecular novelty.
+
+DRAMP 5.0 paper: https://doi.org/10.1093/nar/gkag989
+DBAASP v4 paper: https://doi.org/10.1093/nar/gkag1050
+dbAMP 3.0 paper: https://doi.org/10.1093/nar/gkae1019

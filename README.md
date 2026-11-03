@@ -30,7 +30,7 @@ Antimicrobial peptide discovery requires both activity against microorganisms an
 
 ## Current collection
 
-**Source-data release: 25 October 2026. Static website release: 3 November 2026.**
+**Source-data release: 25 October 2026. Public-data package: 3 November 2026. Database-comparison snapshot: 4 November 2026.**
 
 | Collection or evidence layer | Count |
 | --- | ---: |
@@ -63,7 +63,7 @@ The [complete archive](https://yuewang-lambda.github.io/tiger-amp-database/archi
 | [Browse peptides](https://yuewang-lambda.github.io/tiger-amp-database/search/) | Search by ID, name, sequence or reference; combine molecular and concentration filters; export matching records. |
 | [Connected evidence](https://yuewang-lambda.github.io/tiger-amp-database/relations/?kind=paired) | Explore activity and host-cell response linked through the same peptide. |
 | [Source publications](https://yuewang-lambda.github.io/tiger-amp-database/publications/) | Find the research articles associated with entity records. |
-| [Statistics](https://yuewang-lambda.github.io/tiger-amp-database/statistics/) | Review coverage and distributions for each unit dataset. |
+| [Statistics](https://yuewang-lambda.github.io/tiger-amp-database/statistics/) | Review distributions, compare sequence coverage with DRAMP 5.0, DBAASP v4 and dbAMP 3.0, and inspect activity–toxicity evidence definitions and downloadable figures. |
 | [Downloads & data](https://yuewang-lambda.github.io/tiger-amp-database/download/) | Download the main tables, release manifest and checksums. |
 | [Data guide](https://yuewang-lambda.github.io/tiger-amp-database/help/) | Understand counts, condition classes, units, sequence annotations and source evidence. |
 

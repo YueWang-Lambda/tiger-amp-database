@@ -1,0 +1,40 @@
+resource	metric	value	scope
+TIGER complete archive	native_records	50992	Literature-specific entity IDs
+TIGER complete archive	canonical_sequences_2to100	21753	20 AA; case-insensitive exact strings
+TIGER core subset	native_records	37800	Entity IDs in either unit core table
+TIGER core subset	canonical_sequences_2to100	15879	20 AA; case-insensitive exact strings
+DRAMP 5.0	native_records	32296	Six paper-defined entry categories
+DRAMP 5.0	canonical_sequences_2to100	25268	20 AA; case-insensitive exact strings
+DBAASP v4	native_records	25542	Current public collection API entries
+DBAASP v4	canonical_sequences_2to100	17300	20 AA; case-insensitive exact strings
+dbAMP 3.0	native_records	35600	Current official v3 Excel entries
+dbAMP 3.0	canonical_sequences_2to100	30456	20 AA; case-insensitive exact strings
+TIGER archive	unmatched_to_three_database_union	8726	Denominator 21753; canonical sequence strings
+TIGER core	unmatched_to_three_database_union	5160	Denominator 15879; canonical sequence strings
+TIGER paired	unmatched_to_three_database_union	227	Denominator 1300; canonical sequence strings
+TIGER	native_annotation_co_coverage	19956	entities with activity and safety source records
+DRAMP 5.0	native_annotation_co_coverage	3855	entries with activity and toxicity annotations
+DBAASP v4	native_annotation_co_coverage	13348	entries in the microbial-activity plus toxicity filter
+dbAMP 3.0	native_annotation_co_coverage	6878	entries sharing microbial and host-related category tags
+TIGER	evidence_entities	19956	Activity and safety records under the same entity
+TIGER	evidence_entities	3023	Qualifying strain-resolved activity and host toxicity
+TIGER	evidence_links	19888	Qualifying strain-resolved activity and host toxicity
+TIGER	evidence_entities	2589	MIC + HC50/IC50/CC50 in a shared native unit
+TIGER	evidence_links	16369	MIC + HC50/IC50/CC50 in a shared native unit
+TIGER	evidence_entities	1775	Shared native unit and an exact value on both sides
+TIGER	evidence_links	10801	Shared native unit and an exact value on both sides
+DBAASP v4	downloaded_entries	14221	All entries in the official toxicity filter
+DBAASP v4	common_scope_native_unit_pairs	17294	Conservative same-entry, same-reference, shared-native-unit strain–host subset
+DBAASP v4	common_scope_paired_native_entries	2782	Native entries contributing to the conservative shared-unit subset
+DBAASP v4	common_scope_exact_pairs	10131	Conservative shared-unit strain–host subset with exact values on both sides
+DBAASP v4	common_scope_exact_paired_native_entries	1812	Native entries contributing to the exact shared-unit subset
+TIGER / DBAASP parsed subsets	sequence_strain_host_keys_TIGER	7473	all; coverage keys, not assay agreement or molecular novelty
+TIGER / DBAASP parsed subsets	sequence_strain_host_keys_DBAASP	11545	all; coverage keys, not assay agreement or molecular novelty
+TIGER / DBAASP parsed subsets	sequence_strain_host_keys_shared	2181	all; coverage keys, not assay agreement or molecular novelty
+TIGER / DBAASP parsed subsets	sequence_strain_host_keys_TIGER_only	5292	all; coverage keys, not assay agreement or molecular novelty
+TIGER / DBAASP parsed subsets	sequence_strain_host_keys_DBAASP_only	9364	all; coverage keys, not assay agreement or molecular novelty
+TIGER / DBAASP parsed subsets	sequence_strain_host_keys_TIGER	4988	exact; coverage keys, not assay agreement or molecular novelty
+TIGER / DBAASP parsed subsets	sequence_strain_host_keys_DBAASP	6211	exact; coverage keys, not assay agreement or molecular novelty
+TIGER / DBAASP parsed subsets	sequence_strain_host_keys_shared	1510	exact; coverage keys, not assay agreement or molecular novelty
+TIGER / DBAASP parsed subsets	sequence_strain_host_keys_TIGER_only	3478	exact; coverage keys, not assay agreement or molecular novelty
+TIGER / DBAASP parsed subsets	sequence_strain_host_keys_DBAASP_only	4701	exact; coverage keys, not assay agreement or molecular novelty

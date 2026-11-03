@@ -12,6 +12,10 @@
   <link rel="icon" type="image/svg+xml" href="/static/css/tiger-favicon.svg?v=585ed6dad0a2" sizes="any">
   <link rel="stylesheet" href="/static/css/apexd.css?v=17c00512706e">
   <script src="/static/js/apexd.js?v=2bbb204115c3" defer></script>
+  {% if active == 'statistics' %}
+  <link rel="stylesheet" href="/static/css/comparison.css?v=20261104">
+  <script src="/static/js/comparison.js?v=20261104" type="module"></script>
+  {% endif %}
   {% if active == 'home' %}
   <link rel="stylesheet" href="/static/css/apexd-observatory.css?v=9c2eea07f5cb">
   <script src="/static/js/apexd-observatory-loader.js?v=8a52b531572b" defer></script>
