@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+{% block title %}Retired record · {{ brand_name }}{% endblock %}
+{% block content %}
+<header class="page-heading"><p class="eyebrow">RECORD RETIRED</p><h1>{{ legacy.old_pep_id }}</h1>
+<p>The imported DBAASP record has been retired. {{ brand_short }} now uses its own extraction from the source literature.</p></header>
+<section class="record-section"><dl><dt>Disposition</dt><dd>{{ legacy.disposition }}</dd><dt>Source reference</dt><dd>{{ legacy.doi }}</dd></dl>
+<p>No verified one-to-one replacement is available. Old measurements and structures are no longer served.</p>
+<a href="/search">Search the current {{ brand_short }} collection</a></section>
+{% endblock %}

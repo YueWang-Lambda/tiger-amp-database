@@ -1,0 +1,11 @@
+<div class="table-scroll"><table data-collection-coverage>
+  <caption>Core peptide IDs and complete summary rows{% if dataset_release_date %} · release {{ dataset_release_date }}{% endif %}</caption>
+  <thead><tr><th scope="col">Dataset scope</th><th scope="col">Distinct peptide IDs</th><th scope="col">Peptide × condition class rows</th></tr></thead>
+  <tbody>
+    <tr data-scope="ug"><th scope="row">µg/mL</th><td>{{ stats.ug_peptides|number }}</td><td>{{ coverage.summary_rows.ug|number if coverage.summary_rows.ug is not none else 'Not available' }}</td></tr>
+    <tr data-scope="uM"><th scope="row">µM</th><td>{{ stats.uM_peptides|number }}</td><td>{{ coverage.summary_rows.uM|number if coverage.summary_rows.uM is not none else 'Not available' }}</td></tr>
+    <tr data-scope="union"><th scope="row">Dual-unit union</th><td>{{ stats.peptides|number }}</td><td>Counted separately by unit</td></tr>
+  </tbody>
+</table></div>
+<p class="table-note">{{ stats.both_units|number }} peptide IDs occur in both datasets; {{ stats.ug_only|number }} are µg/mL-only and {{ stats.uM_only|number }} are µM-only. Count each ID once in the union. Each peptide can have several condition-class rows. Identical sequences under different peptide IDs remain separate literature entities.</p>
+<p class="table-note">Table membership and value availability are tracked separately. The µM table includes all µg/mL members; use value status to select available observations in each unit.</p>

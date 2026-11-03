@@ -1,0 +1,32 @@
+{
+  "status": "PASS",
+  "checks": [
+    "Stored gzip transport verifies",
+    "HTTP-decoded gzip transport verifies",
+    "Corrupt resource rejected",
+    "Bundled gzip fallback preserves bytes",
+    "Invalid filter rejected 0",
+    "Invalid filter rejected 1",
+    "Invalid filter rejected 2",
+    "Invalid filter rejected 3",
+    "Invalid filter rejected 4",
+    "Invalid filter rejected 5",
+    "Invalid filter rejected 6",
+    "Invalid filter rejected 7",
+    "Invalid filter rejected 8",
+    "Invalid filter rejected 9",
+    "Invalid filter rejected 10",
+    "Invalid filter rejected 11",
+    "Invalid filter rejected 12",
+    "Warm server-JS p95 below 300 ms"
+  ],
+  "core_index_gzip_bytes": 862489,
+  "cold_node_search_ms": 1115.018693,
+  "warm_samples": 132,
+  "warm_node_search_p95_ms": 71.19640100000015,
+  "observed_node_process_memory_bytes": {
+    "rss": 239804416,
+    "heapUsed": 145641200
+  },
+  "scope": "Node on the current server, not physical mobile-device or regional-network measurements."
+}

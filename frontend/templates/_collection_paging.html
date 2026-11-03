@@ -1,0 +1,5 @@
+<nav class="pagination" aria-label="Pagination">
+{% if page > 1 %}<a class="button button-light" href="{{ parameter_url(request.url.path,parameters,page=page-1) }}">← Previous</a>{% endif %}
+<span>Page {{ page|number }} of {{ pages|number }}</span>
+{% if page < pages %}<a class="button button-light" href="{{ parameter_url(request.url.path,parameters,page=page+1) }}">Next →</a>{% endif %}
+</nav>

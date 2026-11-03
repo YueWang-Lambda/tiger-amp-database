@@ -1,0 +1,11 @@
+{% extends 'base.html' %}{% from 'macros.html' import raw %}
+{% block title %}Complete entity archive · {{ brand_name }}{% endblock %}
+{% block content %}
+{% include '_collection_nav.html' %}
+<header class="page-heading"><p class="eyebrow">THE COMPLETE ENTITY ARCHIVE</p><h1>Explore every peptide record.</h1><p>Search literature-specific peptide entities, including records outside the core concentration tables.</p></header>
+<form action="/archive" class="collection-filter" method="get"><label>Search records<input type="search" name="query" value="{{ query }}" maxlength="200" placeholder="ID, name, sequence or source reference"></label><label>Membership<select name="scope">{% for value,label in [('all','All entity records'),('core','Core members'),('noncore','Outside the core')] %}<option value="{{ value }}" {% if scope==value %}selected{% endif %}>{{ label }}</option>{% endfor %}</select></label><label>Sequence field<select name="sequence"><option value="all">All records</option><option value="recorded" {% if sequence=='recorded' %}selected{% endif %}>Non-missing</option></select></label><button class="button" type="submit">Apply</button></form>
+<div class="section-heading"><h2 data-result-total>{{ total|number }} entity records</h2><a href="/download/collection/entities" class="text-link">Download complete archive CSV ↓</a></div>
+<p class="table-note"><a href="/help#collection-scope">About archive coverage and entity identifiers →</a></p>
+<div class="table-scroll"><table><thead><tr><th>Entity ID</th><th>Reported name</th><th>Membership</th><th>Sequence field</th><th>Source</th></tr></thead><tbody>{% for r in items %}<tr><td><a href="/peptide/{{ r.peptide_id }}">{{ r.peptide_id }}</a></td><td>{{ raw(r.name) }}</td><td>{{ 'Core' if r.core_member else 'Archive only' }}</td><td class="raw sequence-cell">{{ raw(r.sequence) }}</td><td><a href="{{ article_url(r.article_key) }}">Source publication ↗</a></td></tr>{% else %}<tr><td colspan="5">No records match these filters.</td></tr>{% endfor %}</tbody></table></div>
+{% include '_collection_paging.html' %}
+{% endblock %}

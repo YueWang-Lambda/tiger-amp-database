@@ -1,0 +1,5 @@
+<nav class="scope-tabs" aria-label="Collection scope">
+  <a href="/archive" {% if request.url.path == '/archive' %}aria-current="page"{% endif %}>Complete archive · {{ collection.entities|number }}</a>
+  <a href="/search" {% if request.url.path == '/search' %}aria-current="page"{% endif %}>Core tables · {{ collection.core_entities|number }}</a>
+  <a href="/publications" {% if request.url.path == '/publications' %}aria-current="page"{% endif %}>Source publications</a>
+</nav>

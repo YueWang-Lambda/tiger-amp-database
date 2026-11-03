@@ -1,0 +1,7 @@
+{% macro raw(value, field='') -%}
+<span class="raw"{% if field %} data-field="{{ field }}"{% endif %}{% if value == 'NR' %} title="Not reported"{% endif %}>{{ value if value is not none else '' }}</span>{% if value == '' or value is none %}<span class="empty-note">Empty in source</span>{% endif %}
+{%- endmacro %}
+{% macro badge(corpus) -%}<span class="badge badge-literature">{{ brand_short }} literature extraction</span>{%- endmacro %}
+{% macro unit_tabs(pep_id, unit) -%}
+<div class="unit-tabs" aria-label="Measurement unit"><a href="/peptide/{{ pep_id }}?unit=ug#activity" {% if unit == 'ug' %}aria-current="true"{% endif %}>µg/mL</a><a href="/peptide/{{ pep_id }}?unit=uM#activity" {% if unit == 'uM' %}aria-current="true"{% endif %}>µM</a></div>
+{%- endmacro %}

@@ -1,0 +1,162 @@
+{
+  "status": "PASS",
+  "release_id": "TIGER-20261103-STATIC1-61f8019608",
+  "manifest_sha256": "3d414bbfdc621fe7c662fff16eb8892e775ecf56b710591504e50d6056c9a13f",
+  "public_files_verified": 20597,
+  "structured_files_scanned": 5895,
+  "largest_file_bytes": 21479190,
+  "dataset_rows": {
+    "archive": 50992,
+    "core": 37800,
+    "publications": 7610,
+    "article_records": 7612,
+    "article_aliases": 7670,
+    "legacy": 6181,
+    "mic_ug": 115638,
+    "mbc_ug": 13189,
+    "toxicity_ug": 3144,
+    "mic_uM": 123370,
+    "mbc_uM": 10090,
+    "toxicity_uM": 3888,
+    "relations_activity": 142265,
+    "relations_toxicity": 4530,
+    "relations_paired": 19888,
+    "observations_index": 210503,
+    "figure_columns": 1471,
+    "export_fallback": 3267
+  },
+  "detail_rows": {
+    "identity": 50992,
+    "safety": 36218,
+    "legacy_activity": 1663659,
+    "core_conditions": 512693,
+    "provenance": 192512,
+    "condition_summaries": 240432,
+    "condition_groups": 369441,
+    "condition_records": 271723,
+    "source_evidence": 11606,
+    "aggregation": 31673,
+    "measurement_values": 543446,
+    "summary_sources": 375314,
+    "aggregation_links": 45949,
+    "observations": 210503,
+    "exclusions": 134752,
+    "references": 110133,
+    "measurements": 346095
+  },
+  "detail_entities": {
+    "identity": 50992,
+    "safety": 20670,
+    "legacy_activity": 37800,
+    "core_conditions": 37800,
+    "provenance": 36517,
+    "condition_summaries": 36694,
+    "condition_groups": 36694,
+    "condition_records": 41841,
+    "source_evidence": 2924,
+    "aggregation": 5275,
+    "measurement_values": 41841,
+    "summary_sources": 36694,
+    "aggregation_links": 5275,
+    "observations": 36604,
+    "exclusions": 28035,
+    "references": 37800,
+    "measurements": 44930
+  },
+  "source_scope_checks": {
+    "measurements": {
+      "linked_archive_rows": 346095,
+      "source_total_rows": 392230,
+      "source_null_entity_ids": 46135
+    },
+    "safety": {
+      "linked_archive_rows": 36218,
+      "source_total_rows": 37814,
+      "source_null_entity_ids": 1596
+    },
+    "legacy_activity": {
+      "linked_archive_rows": 1663659,
+      "source_total_rows": 1663659,
+      "source_null_entity_ids": 0
+    },
+    "core_conditions": {
+      "linked_archive_rows": 512693,
+      "source_total_rows": 512693,
+      "source_null_entity_ids": 0
+    },
+    "provenance": {
+      "linked_archive_rows": 192512,
+      "source_total_rows": 192512,
+      "source_null_entity_ids": 0
+    },
+    "condition_summaries": {
+      "linked_archive_rows": 240432,
+      "source_total_rows": 240432,
+      "source_null_entity_ids": 0
+    },
+    "condition_groups": {
+      "linked_archive_rows": 369441,
+      "source_total_rows": 369441,
+      "source_null_entity_ids": 0
+    },
+    "condition_records": {
+      "linked_archive_rows": 271723,
+      "source_total_rows": 308517,
+      "source_null_entity_ids": 36794
+    },
+    "source_evidence": {
+      "linked_archive_rows": 11606,
+      "source_total_rows": 11625,
+      "source_null_entity_ids": 19
+    },
+    "aggregation": {
+      "linked_archive_rows": 31673,
+      "source_total_rows": 31708,
+      "source_null_entity_ids": 35
+    },
+    "observations": {
+      "linked_archive_rows": 210503,
+      "source_total_rows": 210503,
+      "source_null_entity_ids": 0
+    },
+    "exclusions": {
+      "linked_archive_rows": 134752,
+      "source_total_rows": 134752,
+      "source_null_entity_ids": 0
+    }
+  },
+  "downloads": [
+    {
+      "key": "conditions_summary_ug",
+      "uncompressed_sha256": "dfeed0efb984e61d3dec2ccb069fb48f8527e10eceed9c184a7daabff34dfc52",
+      "retained_bytes_identical": true,
+      "rows": 36419,
+      "columns": 71
+    },
+    {
+      "key": "conditions_summary_uM",
+      "uncompressed_sha256": "f0de9db2bf34130de5e96674af182d3290ec13e655bd64ad0d95d361b491bf2a",
+      "retained_bytes_identical": true,
+      "rows": 39803,
+      "columns": 71
+    },
+    {
+      "key": "core_ug",
+      "uncompressed_sha256": "a6a867f602e81ac29e344905a601f51e7cae7461a2865c1c632a24630633dc9c",
+      "retained_bytes_identical": true,
+      "rows": 34533,
+      "columns": 5547
+    },
+    {
+      "key": "core_uM",
+      "uncompressed_sha256": "04e885dbeeed7a0b3064c4976a9b186a42a085b08da4f90ce212680863a335a4",
+      "retained_bytes_identical": true,
+      "rows": 37800,
+      "columns": 5334
+    }
+  ],
+  "local_links_verified": 304,
+  "private_database_published": false,
+  "internal_paths_found": 0,
+  "private_chemistry_fields_found": 0
+}

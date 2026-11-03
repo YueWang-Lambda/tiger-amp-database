@@ -1,0 +1,3 @@
+{% extends 'base.html' %}
+{% block title %}{{ status }} · {{ brand_name }}{% endblock %}
+{% block content %}<section class="empty-state error-page"><p class="eyebrow">{{ status }}</p><h1>{{ message }}</h1><p>Check the peptide identifier or return to the collection.</p><a class="button" href="/search">Browse peptides →</a></section>{% endblock %}

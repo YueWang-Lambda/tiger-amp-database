@@ -1,0 +1,10 @@
+{
+  "status": "PASS",
+  "queries": 1250,
+  "nonempty_queries": 1093,
+  "whole_result_set_and_order": true,
+  "collection_queries": 48,
+  "exports": 23,
+  "byte_identical_exports": true,
+  "failures": []
+}

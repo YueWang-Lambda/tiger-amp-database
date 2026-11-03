@@ -1,0 +1,11 @@
+{
+  "status": "PASS",
+  "release_id": "TIGER-20261103-STATIC1-61f8019608",
+  "site_release_id": "TIGER-20261103-STATIC1-61f8019608-3353d156fa3d285d",
+  "ui_revision": "3353d156fa3d285d",
+  "base_path": "/tiger-amp-database/",
+  "files": 20632,
+  "bytes": 616373224,
+  "size_budget_bytes": 850000000,
+  "main_database_included": false
+}

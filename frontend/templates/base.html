@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="{{ brand_name }} connects antimicrobial activity, host-cell toxicity, sequences and structures to support the design of antimicrobial peptides with a high therapeutic index.">
+  <title>{% block title %}{{ brand_name }}{% endblock %}</title>
+  <meta name="theme-color" content="#ffffff">
+  <meta name="application-name" content="{{ brand_name }}">
+  <meta property="og:title" content="{{ brand_name }}">
+  <meta property="og:description" content="{{ brand_expansion }}. Connect peptide activity and host-cell toxicity to guide high-therapeutic-index antimicrobial peptide design.">
+  <link rel="icon" type="image/svg+xml" href="/static/css/tiger-favicon.svg?v=585ed6dad0a2" sizes="any">
+  <link rel="stylesheet" href="/static/css/apexd.css?v=17c00512706e">
+  <script src="/static/js/apexd.js?v=2bbb204115c3" defer></script>
+  {% if active == 'home' %}
+  <link rel="stylesheet" href="/static/css/apexd-observatory.css?v=9c2eea07f5cb">
+  <script src="/static/js/apexd-observatory-loader.js?v=8a52b531572b" defer></script>
+  {% endif %}
+</head>
+<body data-page="{{ active|default('') }}">
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="shell header-inner">
+    <a class="brand" href="/" aria-label="{{ brand_name }} home"><img class="brand-symbol" src="/static/css/tiger-icon.svg?v=3b2df0e5f758" width="42" height="42" alt="" aria-hidden="true"><span class="brand-wordmark"><strong>{{ brand_short }}</strong><span>AMP Database</span></span></a>
+    <button class="menu-toggle" type="button" aria-controls="main-navigation" aria-expanded="false"><span>Menu</span><span class="menu-icon" aria-hidden="true"></span></button>
+    <nav id="main-navigation" aria-label="Main navigation">
+      <a href="/" {% if active == 'home' %}aria-current="page"{% endif %}>Overview</a>
+      <a href="/search" {% if active == 'search' or request.url.path == '/publications' %}aria-current="page"{% endif %}>Browse peptides</a>
+      <a href="/statistics" {% if active == 'statistics' %}aria-current="page"{% endif %}>Statistics</a>
+      <a href="/download" {% if active == 'download' %}aria-current="page"{% endif %}>Downloads &amp; API</a>
+      <a href="/help" {% if active == 'help' %}aria-current="page"{% endif %}>Data guide</a>
+    </nav>
+    <a class="button header-action" href="/search">Explore data <span aria-hidden="true">↗</span></a>
+  </div>
+</header>
+<main id="main" class="shell" tabindex="-1">{% block content %}{% endblock %}</main>
+<footer class="shell site-footer">
+  <div class="footer-brand"><strong>{{ brand_name }}</strong><span>{{ brand_expansion }}</span><p>Connecting activity and toxicity.<br>Guiding peptide design for a high therapeutic index.</p></div>
+  <nav aria-label="Footer navigation">
+    <div><strong>Explore</strong><a href="/search">Peptide collection</a><a href="/statistics">Collection statistics</a></div>
+    <div><strong>Resources</strong><a href="/download">Datasets &amp; API</a><a href="/help">Data guide</a></div>
+    <div><strong>Understand</strong><a href="/help#condition-classes">MIC conditions</a><a href="/help#units">Values &amp; units</a></div>
+    <div><strong>Developer</strong><a href="https://github.com/YueWang-Lambda">GitHub profile</a><a href="https://delafuentelab.engineering.upenn.edu/">de la Fuente Lab</a></div>
+  </nav>
+</footer>
+<div class="copy-status" role="status" aria-live="polite"></div>
+</body>
+</html>

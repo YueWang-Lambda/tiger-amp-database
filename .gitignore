@@ -1,0 +1,13 @@
+dist*/
+public-data/
+reports/
+release/
+clean-room/
+node_modules/
+__pycache__/
+*.pyc
+.cache/
+.env
+*.db
+*.tar.gz
+

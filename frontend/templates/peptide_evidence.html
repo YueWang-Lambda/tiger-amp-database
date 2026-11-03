@@ -1,0 +1,10 @@
+{% if source_evidence|default([]) %}
+<section class="record-section" id="source-evidence"><h2>{{ brand_short }} extraction: source evidence</h2>
+<p class="table-note">Original censoring and toxicity observations for the {{ 'µg/mL' if unit == 'ug' else 'µM' }} core table, with their source units and record IDs. <a href="/help#sidecars">Source evidence and summary membership →</a></p>
+{% for kind,label in [('toxicity_sources','Toxicity source records'),('censoring','Censoring source records')] %}
+{% set records=source_evidence|selectattr('kind','equalto',kind)|list %}{% if records %}
+<details class="source-evidence-group" data-evidence-kind="{{ kind }}"><summary>{{ label }} ({{ records|length }})</summary>
+<div class="table-scroll"><table class="card-long-table"><thead><tr><th>Core-table column</th><th>Value or bound</th><th>Original source unit</th><th>Source record</th></tr></thead><tbody>
+{% for row in records %}<tr data-evidence-id="{{ row.evidence_id }}"><td>{{ raw(row.core_column) }}</td><td>{% if kind == 'toxicity_sources' %}{{ raw(row.source_fields.value_with_operator) }}{% else %}{{ raw(row.source_fields.comparator) }} {{ raw(row.source_fields.boundary_value) }}<br>{{ raw(row.source_fields.censor_direction) }}{% endif %}</td><td>{{ raw(row.source_fields.unit_raw if kind == 'toxicity_sources' else row.source_fields.raw_unit) }}</td><td>{{ row.source_id }}<br>{{ 'safety' if row.safety_id else 'measurement' }}</td></tr>{% endfor %}
+</tbody></table></div></details>{% endif %}{% endfor %}
+</section>{% endif %}

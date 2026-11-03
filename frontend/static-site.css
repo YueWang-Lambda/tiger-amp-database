@@ -1,0 +1,25 @@
+/* Static data interface; retains the accepted TIGER visual system. */
+body,button,input,select,textarea {font-family:Arial,sans-serif}
+.static-status {font-size:.85rem;color:#53645d;min-height:1.5em;overflow-wrap:anywhere}
+.static-status:empty {display:none}
+.loading-note {padding:2rem 0;color:#53645d}
+.download-grid {display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1.5rem}
+.download-card {padding:1.5rem;border:1px solid #dce3df;border-radius:18px}
+.download-card h3 {margin-top:0}.download-card details{margin-top:1rem}
+.wrap-code,.detail-value {overflow-wrap:anywhere;word-break:break-word}
+.search-exports button,.pagination button {border:0;background:transparent;color:inherit;cursor:pointer;font-size:inherit;padding:.5rem 0;text-decoration:underline;text-underline-offset:4px}
+.search-exports button:disabled,.pagination button:disabled {opacity:.4;cursor:default}
+.scope-tabs {flex-wrap:wrap}.detail-tabs{margin:1.5rem 0;display:flex;flex-wrap:wrap;gap:.5rem}
+.detail-tabs button{border:1px solid #dce3df;border-radius:22px;padding:.6rem 1rem;background:#fff;cursor:pointer;font-size:.85rem}
+.detail-tabs button[aria-pressed=true]{background:#102b23;color:#fff}
+.detail-grid {display:grid;grid-template-columns:minmax(0,3fr) minmax(240px,2fr);gap:2rem}
+.detail-grid img {max-width:100%;height:auto}.detail-fields {display:grid;grid-template-columns:minmax(100px,1fr) minmax(0,3fr);gap:.75rem 1.5rem;font-size:.9rem}
+.detail-fields dt {font-weight:600}.detail-fields dd {margin:0;overflow-wrap:anywhere;white-space:pre-wrap}
+.detail-card {border-top:1px solid #e0e6e2;padding:1rem 0}.detail-card h3{font-size:1rem}
+.detail-card pre {white-space:pre-wrap;overflow-wrap:anywhere}.static-error{padding:1.2rem;border:1px solid #b5755a;border-radius:12px}
+.record-sequence {padding:1rem;background:#f5f7f5;border-radius:12px;overflow-wrap:anywhere;white-space:pre-wrap}
+.table-scroll{max-width:100%}.sequence-column .sequence-preview {max-width:30ch}.code-example{white-space:pre-wrap;overflow-wrap:anywhere}
+.results-table .sequence-preview{display:block;max-width:28ch;overflow:hidden;white-space:nowrap;text-overflow:ellipsis}
+.results-table td small{display:block;margin-top:.3rem}
+button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible{outline:2px solid #247159;outline-offset:3px}
+@media(max-width:700px){.download-grid,.detail-grid{grid-template-columns:1fr}.detail-fields{grid-template-columns:1fr;gap:.4rem}.detail-fields dd{margin-bottom:.7rem}.detail-tabs{gap:.35rem}.detail-tabs button{font-size:.8rem;padding:.5rem .7rem}}

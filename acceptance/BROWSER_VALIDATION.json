@@ -1,0 +1,174 @@
+{
+  "status": "PASS",
+  "checks": [
+    "HTTP 200 ",
+    "No page overflow ",
+    "Overview counts",
+    "3D model canvas",
+    "HTTP 200 search/",
+    "No page overflow search/",
+    "Core count",
+    "Dedicated worker runs search",
+    "HTTP 200 search/?query=melittin",
+    "No page overflow search/?query=melittin",
+    "Search melittin count",
+    "Result pagination",
+    "Back restores search page",
+    "Browser full-result csv",
+    "Browser full-result fasta",
+    "HTTP 200 archive/?scope=noncore",
+    "No page overflow archive/?scope=noncore",
+    "Noncore count",
+    "Persistent collection tabs",
+    "HTTP 200 publications/",
+    "No page overflow publications/",
+    "Publication count",
+    "Publication scope tabs",
+    "Article record links",
+    "HTTP 200 relations/?kind=activity",
+    "No page overflow relations/?kind=activity",
+    "activity count",
+    "HTTP 200 relations/?kind=toxicity",
+    "No page overflow relations/?kind=toxicity",
+    "toxicity count",
+    "HTTP 200 relations/?kind=paired",
+    "No page overflow relations/?kind=paired",
+    "paired count",
+    "HTTP 200 relations/?kind=observations",
+    "No page overflow relations/?kind=observations",
+    "observations count",
+    "HTTP 200 peptide/?id=A01-P10",
+    "No page overflow peptide/?id=A01-P10",
+    "Noncore detail",
+    "HTTP 200 peptide/?id=A1014-P18&unit=ug",
+    "No page overflow peptide/?id=A1014-P18&unit=ug",
+    "Unit-absent notice",
+    "HTTP 200 peptide/?id=MD0916-P1&view=measurements",
+    "No page overflow peptide/?id=MD0916-P1&view=measurements",
+    "Complete source measurements pagination",
+    "HTTP 200 peptide/?id=DB0001_P1",
+    "No page overflow peptide/?id=DB0001_P1",
+    "Legacy replacement",
+    "HTTP 200 peptide/?id=DB9999_P999",
+    "No page overflow peptide/?id=DB9999_P999",
+    "Unmapped retired ID",
+    "HTTP 200 peptide/?id=AS0170-P2",
+    "No page overflow peptide/?id=AS0170-P2",
+    "Literature-only SMILES label",
+    "HTTP 200 statistics/",
+    "No page overflow statistics/",
+    "Statistics visible",
+    "HTTP 200 statistics/uM/",
+    "No page overflow statistics/uM/",
+    "uM statistics",
+    "HTTP 200 help/",
+    "No page overflow help/",
+    "Guide counts",
+    "HTTP 200 download/",
+    "No page overflow download/",
+    "Four primary tables",
+    "Direct gzip download /tiger-amp-database/data/TIGER-20261103-STATIC1-61f8019608/downloads/APEXD_summary_v2.csv.gz",
+    "Direct gzip download /tiger-amp-database/data/TIGER-20261103-STATIC1-61f8019608/downloads/APEXD_summary_uM_v2.csv.gz",
+    "Direct gzip download /tiger-amp-database/data/TIGER-20261103-STATIC1-61f8019608/downloads/apexd_core_ug.csv.gz",
+    "Direct gzip download /tiger-amp-database/data/TIGER-20261103-STATIC1-61f8019608/downloads/apexd_core_uM.csv.gz",
+    "HTTP 200 download/?dataset=exclusions",
+    "No page overflow download/?dataset=exclusions",
+    "Supplementary exclusion file",
+    "No dynamic API requests",
+    "Mobile overflow ",
+    "Mobile overflow search/?query=melittin",
+    "Mobile overflow peptide/?id=AS0170-P2",
+    "Mobile overflow download/",
+    "Mobile menu",
+    "Mobile 3D loads",
+    "No JavaScript exceptions",
+    "No HTTP errors"
+  ],
+  "check_count": 82,
+  "javascript_errors": [],
+  "http_errors": [],
+  "timings": [
+    {
+      "route": "",
+      "local_ready_seconds": 0.225
+    },
+    {
+      "route": "search/",
+      "local_ready_seconds": 2.243
+    },
+    {
+      "route": "search/?query=melittin",
+      "local_ready_seconds": 1.424
+    },
+    {
+      "route": "archive/?scope=noncore",
+      "local_ready_seconds": 0.888
+    },
+    {
+      "route": "publications/",
+      "local_ready_seconds": 0.256
+    },
+    {
+      "route": "relations/?kind=activity",
+      "local_ready_seconds": 1.401
+    },
+    {
+      "route": "relations/?kind=toxicity",
+      "local_ready_seconds": 0.462
+    },
+    {
+      "route": "relations/?kind=paired",
+      "local_ready_seconds": 0.432
+    },
+    {
+      "route": "relations/?kind=observations",
+      "local_ready_seconds": 1.913
+    },
+    {
+      "route": "peptide/?id=A01-P10",
+      "local_ready_seconds": 0.908
+    },
+    {
+      "route": "peptide/?id=A1014-P18&unit=ug",
+      "local_ready_seconds": 0.87
+    },
+    {
+      "route": "peptide/?id=MD0916-P1&view=measurements",
+      "local_ready_seconds": 0.995
+    },
+    {
+      "route": "peptide/?id=DB0001_P1",
+      "local_ready_seconds": 0.949
+    },
+    {
+      "route": "peptide/?id=DB9999_P999",
+      "local_ready_seconds": 1.066
+    },
+    {
+      "route": "peptide/?id=AS0170-P2",
+      "local_ready_seconds": 0.981
+    },
+    {
+      "route": "statistics/",
+      "local_ready_seconds": 0.149
+    },
+    {
+      "route": "statistics/uM/",
+      "local_ready_seconds": 0.11
+    },
+    {
+      "route": "help/",
+      "local_ready_seconds": 0.119
+    },
+    {
+      "route": "download/",
+      "local_ready_seconds": 0.112
+    },
+    {
+      "route": "download/?dataset=exclusions",
+      "local_ready_seconds": 0.127
+    }
+  ],
+  "timing_scope": "Local loopback, browser context with an initially empty cache; not a China or overseas latency measurement.",
+  "regional_tests": "NOT_RUN"
+}

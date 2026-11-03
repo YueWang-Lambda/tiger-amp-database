@@ -1,0 +1,6 @@
+<section class="stats-grid archive-stats" aria-label="Complete entity archive" id="coverage">
+  <a href="/archive" data-count="entities"><span class="stat-number">{{ collection.entities|number }}</span><h2>Peptide entity records</h2><p>The complete current archive, counted by literature-specific entity ID.</p></a>
+  <a href="/archive?sequence=recorded" data-count="sequences"><span class="stat-number">{{ collection.sequence_present|number }}</span><h2>With a recorded sequence</h2><p>Non-missing sequence fields, including modified or unresolved residues.</p></a>
+  <a href="/publications" data-count="publications"><span class="stat-number">{{ collection.publications|number }}</span><h2>Source publications</h2><p>Source references associated with the current entity archive.</p></a>
+</section>
+<p class="archive-count-note">Each literature-specific entity has its own record, with source sequence annotations and experimental context. <a href="/help#collection-scope">Collection definitions →</a></p>

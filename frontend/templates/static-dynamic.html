@@ -1,0 +1,6 @@
+{% extends 'base.html' %}
+{% block title %}{{ {'archive':'Complete archive','publications':'Source publications','relations':'Experimental relationships','peptide':'Peptide record','article':'Source publication'}[view] }} · {{ brand_name }}{% endblock %}
+{% block content %}
+{% if view in ('archive','publications','peptide') %}{% include '_collection_nav.html' %}{% endif %}
+<div id="dynamic-page" data-view="{{ view }}"><header class="page-heading"><p class="eyebrow">TIGER AMP DATABASE</p><h1>{{ {'archive':'Explore every peptide record.','publications':'Source publications','relations':'Experimental relationships','peptide':'Peptide record','article':'Source publication'}[view] }}</h1></header><p class="loading-note">Loading records…</p></div>
+{% endblock %}
