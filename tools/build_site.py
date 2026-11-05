@@ -25,6 +25,20 @@ def build(base,output=None):
     ui_revision=ui_hasher.hexdigest()[:16];app_path='app/'+ui_revision
     shutil.copytree(front/'static',out/'static',dirs_exist_ok=True)
     shutil.copytree(data,out/'data'/release,dirs_exist_ok=True)
+    # Give every public download the current product name. Keep the pinned
+    # release immutable: these byte-identical aliases retain its checksums.
+    download_entries={}
+    download_dir=out/'downloads';download_dir.mkdir(exist_ok=True)
+    for key,entry in {**manifest['downloads'],**manifest['supplementary']}.items():
+        name=Path(entry['path']).name
+        name='tiger_'+re.sub(r'(?i)^apexd_', '', name)
+        name=name.replace('_v2.', '.')
+        target=download_dir/name
+        assert name not in {e['filename'] for e in download_entries.values()},name
+        shutil.copyfile(data/entry['path'],target)
+        assert digest(target)==entry['sha256'],name
+        download_entries[key]={**entry,'filename':name,'path':'downloads/'+name,'source_path_in_release':entry['path']}
+    (download_dir/'manifest.json').write_text(json.dumps({'release_id':release,'files':download_entries},indent=2)+'\n')
     (out/app_path).mkdir(parents=True,exist_ok=True)
     for file in front.glob('*.mjs'):shutil.copyfile(file,out/app_path/file.name)
     shutil.copyfile(front/'static-site.css',out/app_path/'static-site.css')
@@ -80,7 +94,7 @@ def build(base,output=None):
     render('search.html','search/index.html','search')
     for page in ('archive','publications','relations','peptide','article'):
         render('static-dynamic.html',page+'/index.html','search' if page in ('archive','publications','peptide') else '',static_page=page,view=page)
-    render('static-download.html','download/index.html','download',manifest=manifest,data_prefix=base+'data/'+release+'/')
+    render('static-download.html','download/index.html','download',manifest=manifest,download_entries=download_entries,download_prefix=base,data_prefix=base+'data/'+release+'/')
     render('static-404.html','404.html','',static_page='not-found')
     (out/'.nojekyll').write_text('')
     (out/'release.json').write_text(json.dumps({**lock,'site_release_id':release+'-'+ui_revision,'ui_revision':ui_revision,'base_path':base,'data':'data/'+release+'/','site_build_date':manifest['site_build_date']},indent=2)+'\n')

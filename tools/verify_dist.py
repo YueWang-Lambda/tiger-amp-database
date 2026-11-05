@@ -8,6 +8,16 @@ def validate(dist):
     dist=Path(dist).resolve();release=read_json(dist/'release.json');data=dist/release['data'];manifest=read_json(data/'manifest.json');inventory=read_json(data/'inventory.json')
     assert digest(data/'manifest.json')==release['manifest_sha256']
     assert manifest['release_id']==release['release_id']
+    downloads=read_json(dist/'downloads/manifest.json')
+    assert downloads['release_id']==release['release_id']
+    originals={**manifest['downloads'],**manifest['supplementary']}
+    assert set(downloads['files'])==set(originals)
+    for key,entry in downloads['files'].items():
+        path=dist/entry['path']
+        assert path.name==entry['filename'] and path.name.startswith('tiger_'),key
+        assert entry['source_path_in_release']==originals[key]['path'],key
+        assert digest(path)==entry['sha256']==originals[key]['sha256'],key
+        assert path.stat().st_size==entry['bytes']==originals[key]['bytes'],key
     for name,entry in inventory.items():
         path=data/name;assert path.is_file() and not path.is_symlink(),name
         assert path.stat().st_size==entry['bytes'] and digest(path)==entry['sha256'],name

@@ -166,12 +166,13 @@ async function articlePage() {
   const render=number=>{const target=box.querySelector('#article-entities'),offset=(number-1)*30;target.innerHTML=table(['Peptide','Name','Sequence','Membership'],r.items.slice(offset,offset+30).map(p=>[peptideLink(p.peptide_id),value(p.name),`<span class="sequence-preview">${value(p.sequence)}</span>`,p.core_member?'Core':'Archive only']));target.append(pagination({total:r.items.length,limit:30,offset},render));};render(1);
 }
 async function downloads() {
-  const file=new URL('downloads/APEXD_summary_v2.csv.gz',dataBase).href;
+  const file=document.querySelector('[data-download="conditions_summary_ug"]').href;
   document.getElementById('python-example').textContent=`import pandas as pd\n\nurl = ${JSON.stringify(file)}\ndata = pd.read_csv(url, compression="gzip", keep_default_na=False)\n# Each row is a peptide × MIC condition class.\nprint(data.shape)`;
-  document.getElementById('r-example').textContent=`url <- ${JSON.stringify(file)}\ndownload.file(url, "TIGER_summary.csv.gz", mode = "wb")\ndata <- read.csv(gzfile("TIGER_summary.csv.gz"),\n                 check.names = FALSE, na.strings = NULL)`;
+  document.getElementById('r-example').textContent=`url <- ${JSON.stringify(file)}\ndownload.file(url, "tiger_summary.csv.gz", mode = "wb")\ndata <- read.csv(gzfile("tiger_summary.csv.gz"),\n                 check.names = FALSE, na.strings = NULL)`;
   if(params().dataset) {
-    await start();const name=params().dataset,entry=manifest.supplementary?.[name],box=document.getElementById('supplementary-download');box.hidden=false;
-    if(entry)box.innerHTML=`<h2>${escape(name.replaceAll('_',' '))}</h2><p><a class="button" href="${escape(dataBase+entry.path)}" download>Download ${escape(entry.path.split('/').pop())} ↓</a></p><p>${n(entry.rows??0)} records · ${n(entry.bytes)} bytes</p><code class="wrap-code">SHA-256 ${escape(entry.sha256)}</code>`;
+    const response=await fetch(base+'downloads/manifest.json');if(!response.ok)throw new Error('Download index could not be loaded.');
+    const downloadIndex=await response.json(),name=params().dataset,entry=downloadIndex.files?.[name],box=document.getElementById('supplementary-download');box.hidden=false;
+    if(entry)box.innerHTML=`<h2>${escape(name.replaceAll('_',' '))}</h2><p><a class="button" href="${escape(base+entry.path)}" download>Download ${escape(entry.path.split('/').pop())} ↓</a></p><p>${n(entry.rows??0)} records · ${n(entry.bytes)} bytes</p><code class="wrap-code">SHA-256 ${escape(entry.sha256)}</code>`;
     else box.innerHTML='<p>Select a dataset from the collection views above.</p>';
   }
 }
