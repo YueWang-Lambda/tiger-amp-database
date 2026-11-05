@@ -10,7 +10,7 @@ body,button,input,select,textarea {font-family:Arial,sans-serif}
 .search-exports button,.pagination button {border:0;background:transparent;color:inherit;cursor:pointer;font-size:inherit;padding:.5rem 0;text-decoration:underline;text-underline-offset:4px}
 .search-exports button:disabled,.pagination button:disabled {opacity:.4;cursor:default}
 .scope-tabs {flex-wrap:wrap}.detail-tabs{margin:1.5rem 0;display:flex;flex-wrap:wrap;gap:.5rem}
-.detail-tabs button{border:1px solid #dce3df;border-radius:22px;padding:.6rem 1rem;background:#fff;color:#102b23;cursor:pointer;font-size:.85rem}
+.detail-tabs button{border:1px solid #dce3df;border-radius:22px;padding:.6rem 1rem;background:#fff;color:#102b23;cursor:pointer;font-size:.85rem;transition:border-color .16s}
 .detail-tabs button:hover{border-color:#247159}
 .detail-tabs button[aria-pressed=true]{background:#102b23;color:#fff}
 .detail-grid {display:grid;grid-template-columns:minmax(0,3fr) minmax(240px,2fr);gap:2rem}
