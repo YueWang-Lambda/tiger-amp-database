@@ -170,8 +170,9 @@ async function downloads() {
   document.getElementById('python-example').textContent=`import pandas as pd\n\nurl = ${JSON.stringify(file)}\ndata = pd.read_csv(url, compression="gzip", keep_default_na=False)\n# Each row is a peptide × MIC condition class.\nprint(data.shape)`;
   document.getElementById('r-example').textContent=`url <- ${JSON.stringify(file)}\ndownload.file(url, "tiger_summary.csv.gz", mode = "wb")\ndata <- read.csv(gzfile("tiger_summary.csv.gz"),\n                 check.names = FALSE, na.strings = NULL)`;
   if(params().dataset) {
-    const response=await fetch(base+'downloads/manifest.json');if(!response.ok)throw new Error('Download index could not be loaded.');
+    const response=await fetch(base+'downloads/'+release+'/manifest.json');if(!response.ok)throw new Error('Download index could not be loaded.');
     const downloadIndex=await response.json(),name=params().dataset,entry=downloadIndex.files?.[name],box=document.getElementById('supplementary-download');box.hidden=false;
+    if(downloadIndex.release_id!==release)throw new Error('The download index does not match this data release.');
     if(entry)box.innerHTML=`<h2>${escape(name.replaceAll('_',' '))}</h2><p><a class="button" href="${escape(base+entry.path)}" download>Download ${escape(entry.path.split('/').pop())} ↓</a></p><p>${n(entry.rows??0)} records · ${n(entry.bytes)} bytes</p><code class="wrap-code">SHA-256 ${escape(entry.sha256)}</code>`;
     else box.innerHTML='<p>Select a dataset from the collection views above.</p>';
   }

@@ -28,7 +28,7 @@ def build(base,output=None):
     # Give every public download the current product name. Keep the pinned
     # release immutable: these byte-identical aliases retain its checksums.
     download_entries={}
-    download_dir=out/'downloads';download_dir.mkdir(exist_ok=True)
+    download_dir=out/'downloads'/release;download_dir.mkdir(parents=True,exist_ok=True)
     for key,entry in {**manifest['downloads'],**manifest['supplementary']}.items():
         name=Path(entry['path']).name
         name='tiger_'+re.sub(r'(?i)^apexd_', '', name)
@@ -37,7 +37,7 @@ def build(base,output=None):
         assert name not in {e['filename'] for e in download_entries.values()},name
         shutil.copyfile(data/entry['path'],target)
         assert digest(target)==entry['sha256'],name
-        download_entries[key]={**entry,'filename':name,'path':'downloads/'+name,'source_path_in_release':entry['path']}
+        download_entries[key]={**entry,'filename':name,'path':'downloads/'+release+'/'+name,'source_path_in_release':entry['path']}
     (download_dir/'manifest.json').write_text(json.dumps({'release_id':release,'files':download_entries},indent=2)+'\n')
     (out/app_path).mkdir(parents=True,exist_ok=True)
     for file in front.glob('*.mjs'):shutil.copyfile(file,out/app_path/file.name)

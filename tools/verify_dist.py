@@ -8,7 +8,7 @@ def validate(dist):
     dist=Path(dist).resolve();release=read_json(dist/'release.json');data=dist/release['data'];manifest=read_json(data/'manifest.json');inventory=read_json(data/'inventory.json')
     assert digest(data/'manifest.json')==release['manifest_sha256']
     assert manifest['release_id']==release['release_id']
-    downloads=read_json(dist/'downloads/manifest.json')
+    downloads=read_json(dist/'downloads'/release['release_id']/'manifest.json')
     assert downloads['release_id']==release['release_id']
     originals={**manifest['downloads'],**manifest['supplementary']}
     assert set(downloads['files'])==set(originals)
