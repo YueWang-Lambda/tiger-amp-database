@@ -1,0 +1,4 @@
+database	source_identities	matched	unmatched	needs_review	articles_preprints	patents	other_sources	unmatched_articles_preprints
+DBAASP v4	4972	3130	1720	122	4955	17	0	1703
+DRAMP 5.0	4538	1028	3156	354	3862	527	149	2629
+dbAMP 3.0	5228	1896	3316	16	5228	0	0	3316

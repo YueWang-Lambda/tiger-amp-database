@@ -37,7 +37,16 @@ function renderScope(all,key){
  drawIntersections(s.upset);
 }
 async function main(){
- const response=await fetch(base+'static/comparison/20261104/comparison.json');if(!response.ok)throw Error('Comparison file unavailable');const data=await response.json();
+ const response=await fetch(base+'static/comparison/20261106/comparison.json');if(!response.ok)throw Error('Comparison file unavailable');const data=await response.json();
+ document.querySelector('#source-record-counts tbody').innerHTML=data.source_records.map(r=>`<tr><th scope="row">${esc(r.database)}</th>${cell(n(r.activity_count)+' '+r.activity_unit)}${cell(n(r.toxicity_count)+' '+r.toxicity_unit)}${cell(r.scope)}</tr>`).join('');
+ document.querySelector('#harmonized-signatures tbody').innerHTML=data.harmonized.rows.map(r=>`<tr><th scope="row">${esc(r.database)}</th>${cell(n(r.activity_signatures))}${cell(n(r.toxicity_signatures))}</tr>`).join('');
+ document.getElementById('harmonized-definition').textContent=data.harmonized.definition+' '+data.harmonized.interpretation;
+ document.getElementById('harmonized-selection').textContent=data.harmonized.selection;
+ document.getElementById('harmonized-revision').textContent=data.harmonized.rule_version+': '+data.harmonized.revision;
+ const refs=data.bibliography;
+ document.querySelector('#reference-coverage tbody').innerHTML=refs.rows.map(r=>`<tr><th scope="row">${esc(r.database)}</th>${cell(n(r.source_identities))}${cell(n(r.matched))}${cell(n(r.unmatched))}${cell(n(r.needs_review))}${cell(n(r.articles_preprints)+' articles/preprints; '+n(r.patents)+' patents; '+n(r.other_sources)+' other sources')}</tr>`).join('');
+ document.getElementById('reference-coverage-note').textContent=`Across the three databases, the unmatched list contains ${n(refs.unmatched_unique_articles_preprints)} distinct articles/preprints and ${n(refs.unmatched_unique_patents)} patent identities. Unmatched means absent from the current TIGER reference index; eligibility for inclusion is assessed separately. Conflicting or unresolved citation identities stay in the review column.`;
+ document.getElementById('source-quality-note').textContent=`Source quality review: ${n(data.source_quality.source_safety_rows_with_operator_in_unit)} safety rows contain a comparison operator in the unit field. ${data.source_quality.treatment}`;
  document.querySelector('#comparison-counts tbody').innerHTML=data.collections.map(r=>`<tr><th scope="row">${esc(r.label)}</th>${cell(n(r.records))}${cell(n(r.sequences))}${cell(r.record_definition)}</tr>`).join('');
  document.getElementById('comparison-evidence').innerHTML=data.evidence.map(r=>`<article><h4>${esc(r.database)}</h4><p class="evidence-count">${n(r.count)}</p><p class="evidence-kind">${esc(r.unit)}</p><p>${esc(r.definition)}</p><a href="${esc(r.url)}">Source and database →</a></article>`).join('');
  const audit=data.measurement_audit,coverage=data.pair_key_coverage.coverage;

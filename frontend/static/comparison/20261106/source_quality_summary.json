@@ -1,0 +1,6 @@
+{
+  "source_safety_rows_with_operator_in_unit": 258,
+  "affected_entities": 215,
+  "affected_article_ids": 71,
+  "treatment": "Source rows retain their recorded fields and count toward source coverage. Rows lacking interpretable concentration units are excluded from the shared-rule concentration comparison. Source-evidence corrections are tracked separately from this frozen data release."
+}

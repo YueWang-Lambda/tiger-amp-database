@@ -30,7 +30,7 @@ Antimicrobial peptide discovery requires both activity against microorganisms an
 
 ## Current collection
 
-**Source-data release: 25 October 2026. Public-data package: 3 November 2026. Database-comparison snapshot: 4 November 2026.**
+**Source-data release: 25 October 2026. Public-data package: 3 November 2026. Comparison audit revision: 6 November 2026; sequence and pairing snapshot: 4 November 2026.**
 
 | Collection or evidence layer | Count |
 | --- | ---: |
@@ -38,11 +38,15 @@ Antimicrobial peptide discovery requires both activity against microorganisms an
 | Entities with a recorded sequence | 40,986 |
 | Core entities across the two unit datasets | 37,800 |
 | Source publication references | 7,610 |
+| Original measurement rows linked to archive entities | 346,095 |
+| Original safety rows linked to archive entities | 36,218 |
 | Peptide–strain activity relationships | 142,265 |
 | Peptide–host toxicity relationships | 4,530 |
 | Connected peptide × strain × host evidence links | 19,888 |
 
 Entity counts use literature-specific identifiers: the same sequence reported under different entity IDs remains separately traceable. Recorded sequence fields retain source notation, including modified and unresolved residues.
+
+The original long-table counts preserve source observations before endpoint, target, unit, value and aggregation rules. Ordinary MIC labels occur on 262,477 measurement rows. The [audited comparison](https://yuewang-lambda.github.io/tiger-amp-database/statistics/#source-record-coverage) separately presents original source rows, entry-level annotation coverage and shared-rule concentration signatures, together with source-literature coverage.
 
 Activity relationships comprise **136,237 bacterial** and **6,028 fungal** strain relationships. The connected activity–toxicity layer covers **3,023 core entities**; each link joins a peptide, a microbial strain and a host cell line or erythrocyte source. These links support selectivity analyses with explicitly chosen endpoints, compatible units and assay context. See the [counting definitions](https://yuewang-lambda.github.io/tiger-amp-database/help/#experimental-relations).
 

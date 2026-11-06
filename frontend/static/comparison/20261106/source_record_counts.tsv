@@ -1,0 +1,6 @@
+database	native_entries	activity_count	activity_unit	toxicity_count	toxicity_unit	plain_MIC_count	plain_MIC_unit	scope
+TIGER complete archive	50992	346095	measurement rows	36218	safety rows	262477	rows_with_endpoint_MIC	Literature-specific entity archive
+TIGER core subset	37800	313005	measurement rows	32250	safety rows	245839	rows_with_endpoint_MIC	Source rows restricted to current core members
+DRAMP 5.0	32296	9104	entries with target annotations	3996	entries with hemolysis/cytotoxicity annotations	16741	MIC_text_mentions	Entry-level annotation coverage
+DBAASP v4	25542	197338	target-activity array rows	23692	hemolytic/cytotoxic array rows	142133	rows_with_endpoint_MIC	Source-native assay arrays
+dbAMP 3.0	35600	17810	entries with target annotations	7339	entries with host/toxic-function tags	75232	MIC_text_mentions	Entry-level annotations and functional categories

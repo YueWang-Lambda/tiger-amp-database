@@ -1,0 +1,1123 @@
+{
+  "version": "TIGER-COMPARISON-20261106",
+  "status": "COMPLETE",
+  "snapshot_date": "2026-11-04",
+  "tiger_data_release": "TIGER-20261103-STATIC1-61f8019608",
+  "collections": [
+    {
+      "label": "TIGER complete archive",
+      "records": 50992,
+      "sequences": 21753,
+      "record_definition": "Literature-specific entity IDs"
+    },
+    {
+      "label": "TIGER core subset",
+      "records": 37800,
+      "sequences": 15879,
+      "record_definition": "Entity IDs in either unit core table"
+    },
+    {
+      "label": "DRAMP 5.0",
+      "records": 32296,
+      "sequences": 25268,
+      "record_definition": "Six paper-defined entry categories"
+    },
+    {
+      "label": "DBAASP v4",
+      "records": 25542,
+      "sequences": 17300,
+      "record_definition": "Current public collection API entries"
+    },
+    {
+      "label": "dbAMP 3.0",
+      "records": 35600,
+      "sequences": 30456,
+      "record_definition": "Current official v3 Excel entries"
+    }
+  ],
+  "scopes": {
+    "archive": {
+      "label": "complete archive",
+      "total": 21753,
+      "shared": 13027,
+      "unmatched": 8726,
+      "by_database": [
+        {
+          "label": "DRAMP 5.0",
+          "shared": 4769,
+          "unmatched": 16984
+        },
+        {
+          "label": "DBAASP v4",
+          "shared": 11552,
+          "unmatched": 10201
+        },
+        {
+          "label": "dbAMP 3.0",
+          "shared": 9681,
+          "unmatched": 12072
+        }
+      ],
+      "upset": {
+        "datasets": [
+          "TIGER archive",
+          "DRAMP 5.0",
+          "DBAASP v4",
+          "dbAMP 3.0"
+        ],
+        "intersections": [
+          {
+            "membership": "0100",
+            "count": 10283
+          },
+          {
+            "membership": "1000",
+            "count": 8726
+          },
+          {
+            "membership": "0001",
+            "count": 8428
+          },
+          {
+            "membership": "0101",
+            "count": 8136
+          },
+          {
+            "membership": "1011",
+            "count": 4888
+          },
+          {
+            "membership": "1111",
+            "count": 3746
+          },
+          {
+            "membership": "1010",
+            "count": 2740
+          },
+          {
+            "membership": "0011",
+            "count": 2318
+          },
+          {
+            "membership": "0111",
+            "count": 1893
+          },
+          {
+            "membership": "0010",
+            "count": 1350
+          },
+          {
+            "membership": "1001",
+            "count": 630
+          },
+          {
+            "membership": "1100",
+            "count": 428
+          },
+          {
+            "membership": "1101",
+            "count": 417
+          },
+          {
+            "membership": "0110",
+            "count": 187
+          },
+          {
+            "membership": "1110",
+            "count": 178
+          }
+        ]
+      }
+    },
+    "core": {
+      "label": "core collection",
+      "total": 15879,
+      "shared": 10719,
+      "unmatched": 5160,
+      "by_database": [
+        {
+          "label": "DRAMP 5.0",
+          "shared": 3737,
+          "unmatched": 12142
+        },
+        {
+          "label": "DBAASP v4",
+          "shared": 10103,
+          "unmatched": 5776
+        },
+        {
+          "label": "dbAMP 3.0",
+          "shared": 8144,
+          "unmatched": 7735
+        }
+      ],
+      "upset": {
+        "datasets": [
+          "TIGER core",
+          "DRAMP 5.0",
+          "DBAASP v4",
+          "dbAMP 3.0"
+        ],
+        "intersections": [
+          {
+            "membership": "0100",
+            "count": 10616
+          },
+          {
+            "membership": "0001",
+            "count": 8747
+          },
+          {
+            "membership": "0101",
+            "count": 8343
+          },
+          {
+            "membership": "1000",
+            "count": 5160
+          },
+          {
+            "membership": "1011",
+            "count": 4313
+          },
+          {
+            "membership": "1111",
+            "count": 3310
+          },
+          {
+            "membership": "0011",
+            "count": 2893
+          },
+          {
+            "membership": "1010",
+            "count": 2358
+          },
+          {
+            "membership": "0111",
+            "count": 2329
+          },
+          {
+            "membership": "0010",
+            "count": 1732
+          },
+          {
+            "membership": "1001",
+            "count": 311
+          },
+          {
+            "membership": "0110",
+            "count": 243
+          },
+          {
+            "membership": "1101",
+            "count": 210
+          },
+          {
+            "membership": "1110",
+            "count": 122
+          },
+          {
+            "membership": "1100",
+            "count": 95
+          }
+        ]
+      }
+    },
+    "paired": {
+      "label": "activity–toxicity linked subset",
+      "total": 1300,
+      "shared": 1073,
+      "unmatched": 227,
+      "by_database": [
+        {
+          "label": "DRAMP 5.0",
+          "shared": 572,
+          "unmatched": 728
+        },
+        {
+          "label": "DBAASP v4",
+          "shared": 1025,
+          "unmatched": 275
+        },
+        {
+          "label": "dbAMP 3.0",
+          "shared": 903,
+          "unmatched": 397
+        }
+      ],
+      "upset": {
+        "datasets": [
+          "TIGER paired",
+          "DRAMP 5.0",
+          "DBAASP v4",
+          "dbAMP 3.0"
+        ],
+        "intersections": [
+          {
+            "membership": "0100",
+            "count": 10701
+          },
+          {
+            "membership": "0001",
+            "count": 9046
+          },
+          {
+            "membership": "0101",
+            "count": 8527
+          },
+          {
+            "membership": "0011",
+            "count": 6857
+          },
+          {
+            "membership": "0111",
+            "count": 5123
+          },
+          {
+            "membership": "0010",
+            "count": 3950
+          },
+          {
+            "membership": "1111",
+            "count": 516
+          },
+          {
+            "membership": "1011",
+            "count": 349
+          },
+          {
+            "membership": "0110",
+            "count": 345
+          },
+          {
+            "membership": "1000",
+            "count": 227
+          },
+          {
+            "membership": "1010",
+            "count": 140
+          },
+          {
+            "membership": "1101",
+            "count": 26
+          },
+          {
+            "membership": "1110",
+            "count": 20
+          },
+          {
+            "membership": "1001",
+            "count": 12
+          },
+          {
+            "membership": "1100",
+            "count": 10
+          }
+        ]
+      }
+    }
+  },
+  "evidence": [
+    {
+      "database": "TIGER",
+      "count": 19956,
+      "unit": "entities with measurement and safety source records",
+      "definition": "Both source-record types occur under the same literature-specific entity ID. Endpoint, unit and resolved-target selection supports 3,023 core entities with 19,888 strain–peptide–host evidence links.",
+      "url": "https://yuewang-lambda.github.io/tiger-amp-database/relations/?kind=paired"
+    },
+    {
+      "database": "DRAMP 5.0",
+      "count": 3855,
+      "unit": "entries with activity and toxicity annotations",
+      "definition": "Non-missing Target_Organism and hemolysis/cytotoxicity text in the six-category bulk export. DRAMP also presents structured target tables on entry pages.",
+      "url": "https://dramp.cpu-bioinfor.org/downloads/"
+    },
+    {
+      "database": "DBAASP v4",
+      "count": 13348,
+      "unit": "entries in the microbial-activity plus toxicity filter",
+      "definition": "Official API intersection of bacterial/fungal target groups and hemolytic/cytotoxic annotation. Detailed assay records support source-specific quantitative pairing.",
+      "url": "https://dbaasp.org/api?page=rest"
+    },
+    {
+      "database": "dbAMP 3.0",
+      "count": 6878,
+      "unit": "entries sharing microbial and host-related category tags",
+      "definition": "Intersection of official functional-category FASTAs. Host-related tags include MammalianCells; these categories describe annotation membership and include broader host-directed activity.",
+      "url": "https://ycclab.cuhk.edu.cn/dbAMP/download2024.php"
+    }
+  ],
+  "tiger_stages": [
+    {
+      "label": "Measurement and safety source records under the same entity",
+      "entities": 19956,
+      "links": null
+    },
+    {
+      "label": "Qualifying strain-resolved activity and host toxicity",
+      "entities": 3023,
+      "links": 19888
+    },
+    {
+      "label": "MIC + HC50/IC50/CC50 in a shared native unit",
+      "entities": 2589,
+      "links": 16369
+    },
+    {
+      "label": "Shared native unit and an exact value on both sides",
+      "entities": 1775,
+      "links": 10801
+    }
+  ],
+  "methods": [
+    "The comparison is a fixed snapshot, not a live ranking. TIGER entity IDs retain article-specific identity; external collections use their native entry definitions. Counts of entities, sequences, measurements and relationship combinations are reported separately.",
+    "Canonical sequence analysis removes whitespace and documented missing markers, folds case and retains only the 20 standard amino-acid letters at lengths 2–100. Identical strings are deduplicated. Matching does not establish chemical identity; D/L configurations, termini, crosslinks and other modifications require separate inspection.",
+    "The DRAMP primary scope reproduces the 32,296 entries in its v5 paper. Including 5,909 additional Candidate AMP records changes TIGER core sequences unmatched to the three-library union from 5,160 to 5,154. dbAMP current Excel has 35,600 records versus 35,599 in FASTA and 35,518 in the paper snapshot.",
+    "Activity–toxicity cards describe the specific annotation object available in each export. Text annotation, functional-category tags and qualified concentration evidence have different inclusion criteria. A toxic functional tag does not enumerate all measured low-toxicity or negative observations.",
+    "All 14,221 DBAASP entries returned by its toxicity filter were retrieved. A conservative parser found 17,294 same-reference, shared-native-unit MIC/50%-response strain–host combinations in 2,782 native entries. This is a parsable common-target subset; unmatched host aliases, non-scalar values and unresolved strain/reference descriptions are tracked as exclusions. It is not a full count of all DBAASP associations.",
+    "TIGER link validation checked both relation foreign keys and shared article identity for all 19,888 links. Published links combine observed strain and host relationships; they are not additional experiments or precomputed clinical therapeutic indices. Native-unit pairing was recomputed from source observations without inferring molecular weights.",
+    "DBAASP comparison data were obtained from the DBAASP team’s public API and are acknowledged as that team’s curated data. DRAMP and dbAMP comparisons likewise use their official public exports. These comparator downloads are separate from TIGER’s independently extracted production records.",
+    "The comparison downloads also provide deduplicated sequence–normalized-strain–host coverage keys for the parsed TIGER and DBAASP quantitative subsets, restricted to host categories observed in both. Source assay roles are preserved: HepG2 responses in DBAASP targetActivities are not reassigned to its hemolytic/cytotoxic array. Resource-specific keys can reflect coverage, naming or parser exclusions; this projection does not test concentration agreement or establish molecular novelty.",
+    "The 5 November source audit directly reconciled current TIGER archive IDs to original measurement and safety long tables: 346,095 measurement rows and 36,218 safety rows. Core membership selects 313,005 and 32,250 rows. Ordinary MIC labels occur on 262,477 archive measurement rows. These are source records before the shared-rule target, unit, value and deduplication filters.",
+    "DBAASP has 197,338 target-activity array rows and 23,692 hemolytic/cytotoxic array rows in the frozen 25,542-entry detail cache. Source arrays retain their original experimental roles. DRAMP and dbAMP counts at this level describe annotated entries or functional tags; complete measurement totals are not established by their text exports.",
+    "Distinct native entry × target/host (retaining reported strain and phenotype labels) × endpoint × native unit × operator × value signatures in a shared 14-microorganism/9-host panel. MIC and HC50/IC50/CC50; positive scalar values or one-sided bounds in µM or µg/mL and equivalent units. No molecular-weight conversion. Ranges and mean ± dispersion expressions remain outside this fixed rule. Identical signatures can combine source rows across conditions or references. Counts describe the recoverable shared-rule subset; source records and annotation coverage are reported separately. Known target-context and endpoint/value parsing gaps were corrected, and explicit resistance labels remain distinct from unqualified species-only targets. Verified DRAMP supplementary fields are included only for IDs in the frozen collection. Source assay roles are preserved.",
+    "The bibliography audit resolves 4,972 DBAASP, 4,538 DRAMP and 5,228 dbAMP source identities. The current TIGER index matches 3,130, 1,028 and 1,896, respectively. Review sets retain identifier conflicts. Across databases, the final unmatched list contains 4,851 articles, 11 preprints and 541 patent identities. Unmatched means absent from the current reference index, before any eligibility decision.",
+    "The sequence-set and TIGER/DBAASP pairing analyses retain their 4 November frozen definitions. The 6 November concentration-signature adapter revision is a separate analysis; its output does not replace or extend those relationship combinations.",
+    "The context-field figure (Figure S2) describes the 4 November pairing-audit input: 14,221 toxicity-filtered DBAASP entries, containing 133,672 target-activity rows and 23,692 safety rows. The full 25,542-entry cache used for the source-record census contains 197,338 target-activity rows. Each denominator belongs to its stated selection.",
+    "Source rows retain their recorded fields and count toward source coverage. Rows lacking interpretable concentration units are excluded from the shared-rule concentration comparison. Source-evidence corrections are tracked separately from this frozen data release."
+  ],
+  "sources": [
+    {
+      "label": "DRAMP 5.0 paper",
+      "url": "https://doi.org/10.1093/nar/gkag989"
+    },
+    {
+      "label": "DBAASP v4 paper",
+      "url": "https://doi.org/10.1093/nar/gkag1050"
+    },
+    {
+      "label": "dbAMP 3.0 paper",
+      "url": "https://doi.org/10.1093/nar/gkae1019"
+    }
+  ],
+  "measurement_audit": {
+    "downloaded_entries": 14221,
+    "common_scope_native_unit_pairs": 17294,
+    "common_scope_paired_native_entries": 2782,
+    "common_scope_exact_pairs": 10131,
+    "common_scope_exact_paired_native_entries": 1812,
+    "common_scope_entry_reference_units": 2809,
+    "policy": "MIC plus explicit HC50/IC50/CC50 or 50% hemolysis/cell-death labels; positive scalar concentrations and inequalities only; uM or ug/mL native units; individually resolvable common target strains and common host labels with documented exact aliases; same native entry and reference ordinal. Excludes ambiguous text, intervals, mean+-SD and unmatched host aliases. Counts describe an audited parsable subset, not all DBAASP links."
+  },
+  "species_host_links": [
+    {
+      "species": "A.baumannii",
+      "host": "97H",
+      "links": 4
+    },
+    {
+      "species": "A.baumannii",
+      "host": "HEK293",
+      "links": 222
+    },
+    {
+      "species": "A.baumannii",
+      "host": "HEK293T",
+      "links": 117
+    },
+    {
+      "species": "A.baumannii",
+      "host": "HK-2",
+      "links": 152
+    },
+    {
+      "species": "A.baumannii",
+      "host": "HaCaT",
+      "links": 79
+    },
+    {
+      "species": "A.baumannii",
+      "host": "HepG2",
+      "links": 426
+    },
+    {
+      "species": "A.baumannii",
+      "host": "Human erythrocytes",
+      "links": 872
+    },
+    {
+      "species": "A.baumannii",
+      "host": "Mouse erythrocytes",
+      "links": 31
+    },
+    {
+      "species": "A.baumannii",
+      "host": "NIH-3T3",
+      "links": 21
+    },
+    {
+      "species": "B.subtilis",
+      "host": "97H",
+      "links": 4
+    },
+    {
+      "species": "B.subtilis",
+      "host": "HEK293",
+      "links": 24
+    },
+    {
+      "species": "B.subtilis",
+      "host": "HEK293T",
+      "links": 62
+    },
+    {
+      "species": "B.subtilis",
+      "host": "HK-2",
+      "links": 49
+    },
+    {
+      "species": "B.subtilis",
+      "host": "HaCaT",
+      "links": 25
+    },
+    {
+      "species": "B.subtilis",
+      "host": "HepG2",
+      "links": 28
+    },
+    {
+      "species": "B.subtilis",
+      "host": "Human erythrocytes",
+      "links": 448
+    },
+    {
+      "species": "B.subtilis",
+      "host": "Mouse erythrocytes",
+      "links": 15
+    },
+    {
+      "species": "B.subtilis",
+      "host": "NIH-3T3",
+      "links": 10
+    },
+    {
+      "species": "C.albicans",
+      "host": "97H",
+      "links": 4
+    },
+    {
+      "species": "C.albicans",
+      "host": "HEK293",
+      "links": 34
+    },
+    {
+      "species": "C.albicans",
+      "host": "HEK293T",
+      "links": 2
+    },
+    {
+      "species": "C.albicans",
+      "host": "HK-2",
+      "links": 10
+    },
+    {
+      "species": "C.albicans",
+      "host": "HaCaT",
+      "links": 120
+    },
+    {
+      "species": "C.albicans",
+      "host": "HepG2",
+      "links": 53
+    },
+    {
+      "species": "C.albicans",
+      "host": "Human erythrocytes",
+      "links": 716
+    },
+    {
+      "species": "C.albicans",
+      "host": "Mouse erythrocytes",
+      "links": 8
+    },
+    {
+      "species": "C.albicans",
+      "host": "NIH-3T3",
+      "links": 44
+    },
+    {
+      "species": "E.coli",
+      "host": "97H",
+      "links": 4
+    },
+    {
+      "species": "E.coli",
+      "host": "HEK293",
+      "links": 309
+    },
+    {
+      "species": "E.coli",
+      "host": "HEK293T",
+      "links": 288
+    },
+    {
+      "species": "E.coli",
+      "host": "HK-2",
+      "links": 241
+    },
+    {
+      "species": "E.coli",
+      "host": "HaCaT",
+      "links": 235
+    },
+    {
+      "species": "E.coli",
+      "host": "HepG2",
+      "links": 563
+    },
+    {
+      "species": "E.coli",
+      "host": "Human erythrocytes",
+      "links": 1922
+    },
+    {
+      "species": "E.coli",
+      "host": "Mouse erythrocytes",
+      "links": 140
+    },
+    {
+      "species": "E.coli",
+      "host": "NIH-3T3",
+      "links": 103
+    },
+    {
+      "species": "E.faecalis",
+      "host": "HEK293",
+      "links": 40
+    },
+    {
+      "species": "E.faecalis",
+      "host": "HEK293T",
+      "links": 34
+    },
+    {
+      "species": "E.faecalis",
+      "host": "HK-2",
+      "links": 59
+    },
+    {
+      "species": "E.faecalis",
+      "host": "HaCaT",
+      "links": 46
+    },
+    {
+      "species": "E.faecalis",
+      "host": "HepG2",
+      "links": 170
+    },
+    {
+      "species": "E.faecalis",
+      "host": "Human erythrocytes",
+      "links": 309
+    },
+    {
+      "species": "E.faecalis",
+      "host": "Mouse erythrocytes",
+      "links": 38
+    },
+    {
+      "species": "E.faecalis",
+      "host": "NIH-3T3",
+      "links": 5
+    },
+    {
+      "species": "E.faecium",
+      "host": "HEK293",
+      "links": 32
+    },
+    {
+      "species": "E.faecium",
+      "host": "HaCaT",
+      "links": 38
+    },
+    {
+      "species": "E.faecium",
+      "host": "HepG2",
+      "links": 99
+    },
+    {
+      "species": "E.faecium",
+      "host": "Human erythrocytes",
+      "links": 379
+    },
+    {
+      "species": "E.faecium",
+      "host": "Mouse erythrocytes",
+      "links": 25
+    },
+    {
+      "species": "E.faecium",
+      "host": "NIH-3T3",
+      "links": 5
+    },
+    {
+      "species": "K.pneumoniae",
+      "host": "HEK293",
+      "links": 347
+    },
+    {
+      "species": "K.pneumoniae",
+      "host": "HEK293T",
+      "links": 80
+    },
+    {
+      "species": "K.pneumoniae",
+      "host": "HK-2",
+      "links": 251
+    },
+    {
+      "species": "K.pneumoniae",
+      "host": "HaCaT",
+      "links": 116
+    },
+    {
+      "species": "K.pneumoniae",
+      "host": "HepG2",
+      "links": 614
+    },
+    {
+      "species": "K.pneumoniae",
+      "host": "Human erythrocytes",
+      "links": 691
+    },
+    {
+      "species": "K.pneumoniae",
+      "host": "Mouse erythrocytes",
+      "links": 61
+    },
+    {
+      "species": "K.pneumoniae",
+      "host": "NIH-3T3",
+      "links": 11
+    },
+    {
+      "species": "M.tuberculosis",
+      "host": "HEK293",
+      "links": 4
+    },
+    {
+      "species": "M.tuberculosis",
+      "host": "HepG2",
+      "links": 32
+    },
+    {
+      "species": "M.tuberculosis",
+      "host": "Human erythrocytes",
+      "links": 58
+    },
+    {
+      "species": "M.tuberculosis",
+      "host": "NIH-3T3",
+      "links": 1
+    },
+    {
+      "species": "P.aeruginosa",
+      "host": "97H",
+      "links": 4
+    },
+    {
+      "species": "P.aeruginosa",
+      "host": "HEK293",
+      "links": 343
+    },
+    {
+      "species": "P.aeruginosa",
+      "host": "HEK293T",
+      "links": 166
+    },
+    {
+      "species": "P.aeruginosa",
+      "host": "HK-2",
+      "links": 371
+    },
+    {
+      "species": "P.aeruginosa",
+      "host": "HaCaT",
+      "links": 206
+    },
+    {
+      "species": "P.aeruginosa",
+      "host": "HepG2",
+      "links": 573
+    },
+    {
+      "species": "P.aeruginosa",
+      "host": "Human erythrocytes",
+      "links": 1361
+    },
+    {
+      "species": "P.aeruginosa",
+      "host": "Mouse erythrocytes",
+      "links": 118
+    },
+    {
+      "species": "P.aeruginosa",
+      "host": "NIH-3T3",
+      "links": 81
+    },
+    {
+      "species": "S.aureus",
+      "host": "97H",
+      "links": 4
+    },
+    {
+      "species": "S.aureus",
+      "host": "HEK293",
+      "links": 394
+    },
+    {
+      "species": "S.aureus",
+      "host": "HEK293T",
+      "links": 261
+    },
+    {
+      "species": "S.aureus",
+      "host": "HK-2",
+      "links": 230
+    },
+    {
+      "species": "S.aureus",
+      "host": "HaCaT",
+      "links": 342
+    },
+    {
+      "species": "S.aureus",
+      "host": "HepG2",
+      "links": 512
+    },
+    {
+      "species": "S.aureus",
+      "host": "Human erythrocytes",
+      "links": 2459
+    },
+    {
+      "species": "S.aureus",
+      "host": "Mouse erythrocytes",
+      "links": 210
+    },
+    {
+      "species": "S.aureus",
+      "host": "NIH-3T3",
+      "links": 105
+    },
+    {
+      "species": "S.enterica",
+      "host": "HEK293",
+      "links": 62
+    },
+    {
+      "species": "S.enterica",
+      "host": "HEK293T",
+      "links": 126
+    },
+    {
+      "species": "S.enterica",
+      "host": "HK-2",
+      "links": 1
+    },
+    {
+      "species": "S.enterica",
+      "host": "HaCaT",
+      "links": 15
+    },
+    {
+      "species": "S.enterica",
+      "host": "HepG2",
+      "links": 21
+    },
+    {
+      "species": "S.enterica",
+      "host": "Human erythrocytes",
+      "links": 213
+    },
+    {
+      "species": "S.enterica",
+      "host": "Mouse erythrocytes",
+      "links": 21
+    },
+    {
+      "species": "S.enterica",
+      "host": "NIH-3T3",
+      "links": 16
+    },
+    {
+      "species": "S.epidermidis",
+      "host": "HEK293",
+      "links": 13
+    },
+    {
+      "species": "S.epidermidis",
+      "host": "HEK293T",
+      "links": 51
+    },
+    {
+      "species": "S.epidermidis",
+      "host": "HK-2",
+      "links": 132
+    },
+    {
+      "species": "S.epidermidis",
+      "host": "HaCaT",
+      "links": 65
+    },
+    {
+      "species": "S.epidermidis",
+      "host": "HepG2",
+      "links": 15
+    },
+    {
+      "species": "S.epidermidis",
+      "host": "Human erythrocytes",
+      "links": 345
+    },
+    {
+      "species": "S.epidermidis",
+      "host": "Mouse erythrocytes",
+      "links": 56
+    },
+    {
+      "species": "S.epidermidis",
+      "host": "NIH-3T3",
+      "links": 7
+    },
+    {
+      "species": "Shigella spp.",
+      "host": "HEK293",
+      "links": 37
+    },
+    {
+      "species": "Shigella spp.",
+      "host": "HaCaT",
+      "links": 4
+    },
+    {
+      "species": "Shigella spp.",
+      "host": "HepG2",
+      "links": 1
+    },
+    {
+      "species": "Shigella spp.",
+      "host": "Human erythrocytes",
+      "links": 17
+    }
+  ],
+  "pair_key_coverage": {
+    "status": "COMPLETE",
+    "coverage": {
+      "all": {
+        "TIGER": 7473,
+        "DBAASP": 11545,
+        "shared": 2181,
+        "TIGER_only": 5292,
+        "DBAASP_only": 9364
+      },
+      "exact": {
+        "TIGER": 4988,
+        "DBAASP": 6211,
+        "shared": 1510,
+        "TIGER_only": 3478,
+        "DBAASP_only": 4701
+      }
+    },
+    "shared_hosts": [
+      "HEK293",
+      "HEK293T",
+      "HK-2",
+      "HaCaT",
+      "Human erythrocytes",
+      "Mouse erythrocytes",
+      "NIH-3T3"
+    ],
+    "unrestricted_policy_host_coverage": {
+      "all": {
+        "TIGER": 7967,
+        "DBAASP": 11545,
+        "shared": 2181,
+        "TIGER_only": 5786,
+        "DBAASP_only": 9364
+      },
+      "exact": {
+        "TIGER": 5236,
+        "DBAASP": 6211,
+        "shared": 1510,
+        "TIGER_only": 3726,
+        "DBAASP_only": 4701
+      }
+    },
+    "unrestricted_origins": {
+      "TIGER_all": {
+        "native_links_with_canonical_sequence": 9776,
+        "native_entities_with_canonical_sequence": 1608
+      },
+      "TIGER_exact": {
+        "native_links_with_canonical_sequence": 6421,
+        "native_entities_with_canonical_sequence": 1091
+      },
+      "DBAASP_all": {
+        "native_links_with_canonical_sequence": 12818,
+        "native_entities_with_canonical_sequence": 2099
+      },
+      "DBAASP_exact": {
+        "native_links_with_canonical_sequence": 6937,
+        "native_entities_with_canonical_sequence": 1320
+      }
+    },
+    "definition": "Unique canonical sequence string × normalized strain identity × host, projected from each same-native-unit MIC/50%-response subset and restricted to host categories observed in both parsed subsets. Source IDs, concentrations, unit representations and repeated studies are not part of the coverage key. Exact strings length 2–100 use 20 AA. This comparison does not establish agreement of concentrations or identity of assay conditions; chemical modifications are not resolved by the sequence key. DBAASP is the conservative parsed subset described in Supplementary Methods. Source assay roles are preserved: for example, HepG2 responses present in DBAASP targetActivities are not reassigned to its hemolytic/cytotoxic array."
+  },
+  "audit_revision_date": "2026-11-06",
+  "source_record_audit_date": "2026-11-05",
+  "bibliography_audit_date": "2026-11-05",
+  "source_data_release_date": "2026-10-25",
+  "source_records": [
+    {
+      "database": "TIGER complete archive",
+      "native_entries": 50992,
+      "activity_count": 346095,
+      "activity_unit": "measurement rows",
+      "toxicity_count": 36218,
+      "toxicity_unit": "safety rows",
+      "plain_MIC_count": 262477,
+      "plain_MIC_unit": "rows_with_endpoint_MIC",
+      "scope": "Literature-specific entity archive"
+    },
+    {
+      "database": "TIGER core subset",
+      "native_entries": 37800,
+      "activity_count": 313005,
+      "activity_unit": "measurement rows",
+      "toxicity_count": 32250,
+      "toxicity_unit": "safety rows",
+      "plain_MIC_count": 245839,
+      "plain_MIC_unit": "rows_with_endpoint_MIC",
+      "scope": "Source rows restricted to current core members"
+    },
+    {
+      "database": "DRAMP 5.0",
+      "native_entries": 32296,
+      "activity_count": 9104,
+      "activity_unit": "entries with target annotations",
+      "toxicity_count": 3996,
+      "toxicity_unit": "entries with hemolysis/cytotoxicity annotations",
+      "plain_MIC_count": 16741,
+      "plain_MIC_unit": "MIC_text_mentions",
+      "scope": "Entry-level annotation coverage"
+    },
+    {
+      "database": "DBAASP v4",
+      "native_entries": 25542,
+      "activity_count": 197338,
+      "activity_unit": "target-activity array rows",
+      "toxicity_count": 23692,
+      "toxicity_unit": "hemolytic/cytotoxic array rows",
+      "plain_MIC_count": 142133,
+      "plain_MIC_unit": "rows_with_endpoint_MIC",
+      "scope": "Source-native assay arrays"
+    },
+    {
+      "database": "dbAMP 3.0",
+      "native_entries": 35600,
+      "activity_count": 17810,
+      "activity_unit": "entries with target annotations",
+      "toxicity_count": 7339,
+      "toxicity_unit": "entries with host/toxic-function tags",
+      "plain_MIC_count": 75232,
+      "plain_MIC_unit": "MIC_text_mentions",
+      "scope": "Entry-level annotations and functional categories"
+    }
+  ],
+  "harmonized": {
+    "rule_version": "HARMONIZED-AMP-1.1.0",
+    "rows": [
+      {
+        "database": "TIGER complete archive",
+        "native_entries": 50992,
+        "activity_signatures": 160009,
+        "toxicity_signatures": 4085
+      },
+      {
+        "database": "TIGER core subset",
+        "native_entries": 37800,
+        "activity_signatures": 154931,
+        "toxicity_signatures": 3975
+      },
+      {
+        "database": "DRAMP 5.0",
+        "native_entries": 32296,
+        "activity_signatures": 10684,
+        "toxicity_signatures": 445
+      },
+      {
+        "database": "DBAASP v4",
+        "native_entries": 25542,
+        "activity_signatures": 101391,
+        "toxicity_signatures": 3997
+      },
+      {
+        "database": "dbAMP 3.0",
+        "native_entries": 35600,
+        "activity_signatures": 50516,
+        "toxicity_signatures": 50
+      }
+    ],
+    "definition": "Distinct native entry × target/host (retaining reported strain and phenotype labels) × endpoint × native unit × operator × value signatures in a shared 14-microorganism/9-host panel.",
+    "selection": "MIC and HC50/IC50/CC50; positive scalar values or one-sided bounds in µM or µg/mL and equivalent units. No molecular-weight conversion. Ranges and mean ± dispersion expressions remain outside this fixed rule.",
+    "interpretation": "Identical signatures can combine source rows across conditions or references. Counts describe the recoverable shared-rule subset; source records and annotation coverage are reported separately.",
+    "revision": "Known target-context and endpoint/value parsing gaps were corrected, and explicit resistance labels remain distinct from unqualified species-only targets. Verified DRAMP supplementary fields are included only for IDs in the frozen collection. Source assay roles are preserved."
+  },
+  "bibliography": {
+    "baseline_references": 7610,
+    "rows": [
+      {
+        "database": "DBAASP v4",
+        "source_identities": 4972,
+        "matched": 3130,
+        "unmatched": 1720,
+        "needs_review": 122,
+        "articles_preprints": 4955,
+        "patents": 17,
+        "other_sources": 0,
+        "unmatched_articles_preprints": 1703
+      },
+      {
+        "database": "DRAMP 5.0",
+        "source_identities": 4538,
+        "matched": 1028,
+        "unmatched": 3156,
+        "needs_review": 354,
+        "articles_preprints": 3862,
+        "patents": 527,
+        "other_sources": 149,
+        "unmatched_articles_preprints": 2629
+      },
+      {
+        "database": "dbAMP 3.0",
+        "source_identities": 5228,
+        "matched": 1896,
+        "unmatched": 3316,
+        "needs_review": 16,
+        "articles_preprints": 5228,
+        "patents": 0,
+        "other_sources": 0,
+        "unmatched_articles_preprints": 3316
+      }
+    ],
+    "unmatched_unique_articles_preprints": 4862,
+    "unmatched_unique_patents": 541,
+    "definition": "Normalized citation identities compared with the current TIGER reference index using DOI/PMID and verified bibliographic metadata. Patent and other source records remain distinct; unresolved identities form a separate review set."
+  },
+  "source_quality": {
+    "source_safety_rows_with_operator_in_unit": 258,
+    "affected_entities": 215,
+    "affected_article_ids": 71,
+    "treatment": "Source rows retain their recorded fields and count toward source coverage. Rows lacking interpretable concentration units are excluded from the shared-rule concentration comparison. Source-evidence corrections are tracked separately from this frozen data release."
+  }
+}
